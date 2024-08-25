@@ -12,15 +12,16 @@ export class DogViewModel {
     this.newDogBreed = ko.observable("");
   }
 
-  addDog() {
+  addDog = () => {
     const name = this.newDogName();
     const breed = this.newDogBreed();
 
     if (name && breed) {
       const newDog = new Dog(name, breed);
       this.dogs.push(newDog);
+
       this.newDogName("");
       this.newDogBreed("");
     }
-  }
+  };
 }

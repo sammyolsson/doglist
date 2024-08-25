@@ -13,17 +13,21 @@
       <input type="text" id="dogName" data-bind="value: newDogName" required />
       <br>
       <label for="dogBreed">Dog Breed:</label>
-      <input type="text" id="dogBreed" data-bind="value: newDogBreed"required />
+      <input type="text" id="dogBreed" data-bind="value: newDogBreed" required />
       <button type="submit">Add Dog</button>
     </form>
+
     <h2>List of Dogs</h2>
     <ul id="Doglist" data-bind="foreach: dogs">
-        <li data-bind="text: name() + ' (' + breed() + ')'">Kalle (Pitbull)</li>
+      <li data-bind="text: name() + ' (' + breed() + ')'"></li>
     </ul>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/knockout@3.5.1/build/knockout.js"></script>
-<script src="models/dogModel.js"></script>
-<script src="services/fakeDatabase.js"></script>
-<script src="viewModels/dogViewModel.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/knockout@3.5.1/build/knockout.js"></script>
+  <script src="models/dogModel.js"></script>
+  <script src="services/fakeDatabase.js"></script>
+  <script src="viewModels/dogViewModel.js"></script>
+  <script>
+    ko.applyBindings(new DogViewModel());
+  </script>
   </body>
 </html>
