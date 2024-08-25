@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Doglist</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/knockout@3.5.1/build/knockout.js"></script>
+    <script src="models/dogModel.js"></script>
+    <script src="services/fakeDatabase.js"></script>
+    <script src="viewModels/dogViewModel.js"></script>
+  </head>
+  <body>
+    <div class="addDog"></div>
+    <h1>Add a Dog</h1>
+    <form id="dogForm">
+      <label for="dogName">Dog Name:</label>
+      <input type="text" id="dogName" required />
+      <br>
+      <label for="dogBreed">Dog Breed:</label>
+      <input type="text" id="dogBreed" required />
+      <button type="submit">Add Dog</button>
+    </form>
+    <h2>List of Dogs</h2>
+    <ul id="Doglist">
+        <li>Kalle (Pitbull)</li>
+        <li>Stefan (Labbis)</li>
+    </ul>
+</div>
+  </body>
+</html>
